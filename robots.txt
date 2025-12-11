@@ -1,0 +1,53 @@
+# robots.txt for Lagos Software Consulting Landing Page
+# Generated: 2024-12-11
+# Purpose: Guide search engine crawlers for optimal indexing
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Sitemap location for search engines
+Sitemap: https://lagossoftwareconsulting.com/sitemap.xml
+
+# Crawl delay to be respectful of server resources
+# 1 second delay between requests
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block access to build and development files if accidentally deployed
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /scripts/
+Disallow: /*.json$
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Allow CSS and JS files for proper rendering in search results
+Allow: /styles/*.css
+Allow: /js/*.js
+Allow: /css/*.css
+
+# Block common bot patterns that aren't search engines
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
