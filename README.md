@@ -1,0 +1,2 @@
+# proj_e56-lagos-software-consulting-landing-page
+A professional landing page website for a software consulting firm based in Lagos, Nigeria. The site will showcase the company's services, expertise, and local presence to attract potential clients and establish credibility in the Nigerian tech market. The landing page should reflect modern design standards while incorporating elements that resonat
