@@ -39,6 +39,8 @@
       --color-light: #f8f9fa;
       --color-text: #333333;
       --color-text-light: #666666;
+      --color-error: #dc3545;
+      --color-success: #28a745;
       --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       --spacing-xs: 0.5rem;
       --spacing-sm: 1rem;
@@ -627,14 +629,181 @@
     .contact-content {
       max-width: 600px;
       margin: 0 auto;
+    }
+    
+    .contact-intro {
       text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .contact-form-wrapper {
+      background-color: white;
+      padding: var(--spacing-lg);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .contact-form {
+      color: var(--color-text);
+    }
+    
+    .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: var(--spacing-xs);
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+    
+    .form-group label .required {
+      color: var(--color-error);
+      margin-left: 0.25rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: var(--spacing-sm);
+      border: 2px solid var(--color-light);
+      border-radius: var(--border-radius);
+      font-family: var(--font-primary);
+      font-size: 1rem;
+      transition: var(--transition);
+      background-color: white;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    }
+    
+    .form-group input:invalid:not(:placeholder-shown),
+    .form-group select:invalid:not(:placeholder-shown),
+    .form-group textarea:invalid:not(:placeholder-shown) {
+      border-color: var(--color-error);
+    }
+    
+    .form-group input:valid:not(:placeholder-shown),
+    .form-group select:valid:not(:placeholder-shown),
+    .form-group textarea:valid:not(:placeholder-shown) {
+      border-color: var(--color-success);
+    }
+    
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .form-group .hint {
+      display: block;
+      margin-top: var(--spacing-xs);
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+    }
+    
+    .form-group .error-message {
+      display: none;
+      margin-top: var(--spacing-xs);
+      font-size: 0.875rem;
+      color: var(--color-error);
+    }
+    
+    .form-group input:invalid:not(:placeholder-shown) ~ .error-message,
+    .form-group select:invalid:not(:placeholder-shown) ~ .error-message,
+    .form-group textarea:invalid:not(:placeholder-shown) ~ .error-message {
+      display: block;
+    }
+    
+    .submit-button {
+      width: 100%;
+      padding: var(--spacing-sm) var(--spacing-md);
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 1.125rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .submit-button:hover:not(:disabled) {
+      background-color: var(--color-secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .submit-button:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+    
+    .submit-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    
+    .submit-button .button-text {
+      display: inline-block;
+    }
+    
+    .submit-button .button-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-left: var(--spacing-xs);
+      vertical-align: middle;
+    }
+    
+    .submit-button[aria-busy="true"] .button-spinner {
+      display: inline-block;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .form-message {
+      margin-top: var(--spacing-md);
+      padding: var(--spacing-sm);
+      border-radius: var(--border-radius);
+      display: none;
+      text-align: center;
+      font-weight: 500;
+    }
+    
+    .form-message.success {
+      display: block;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .form-message.error {
+      display: block;
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
     }
     
     .contact-info {
-      margin-top: var(--spacing-md);
+      margin-top: var(--spacing-lg);
       display: flex;
       flex-direction: column;
       gap: var(--spacing-sm);
+      text-align: center;
     }
     
     .contact-item {
@@ -711,6 +880,10 @@
       
       .timeline-item {
         padding-left: var(--spacing-md);
+      }
+      
+      .contact-form-wrapper {
+        padding: var(--spacing-md);
       }
     }
     
@@ -1218,8 +1391,147 @@
     <section id="contact" class="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="contact-content">
-          <h2 id="contact-title">Get In Touch</h2>
-          <p>Ready to transform your business with technology? Contact us today to discuss your project requirements and discover how we can help you achieve your goals.</p>
+          <div class="contact-intro">
+            <h2 id="contact-title">Get In Touch</h2>
+            <p>Ready to transform your business with technology? Fill out the form below and our team will get back to you within 24 hours.</p>
+          </div>
+          
+          <div class="contact-form-wrapper">
+            <form 
+              id="contact-form" 
+              class="contact-form" 
+              action="https://formspree.io/f/YOUR_FORM_ID" 
+              method="POST"
+              novalidate
+            >
+              <div class="form-group">
+                <label for="name">
+                  Full Name
+                  <span class="required" aria-label="required">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="name-error"
+                  placeholder="John Doe"
+                  pattern="[A-Za-z\s]{2,}"
+                  title="Please enter your full name (at least 2 characters)"
+                  autocomplete="name"
+                >
+                <span id="name-error" class="error-message" role="alert">Please enter your full name</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">
+                  Email Address
+                  <span class="required" aria-label="required">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="email-error"
+                  placeholder="john@example.com"
+                  autocomplete="email"
+                  inputmode="email"
+                >
+                <span id="email-error" class="error-message" role="alert">Please enter a valid email address</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="company">
+                  Company Name
+                </label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company"
+                  placeholder="Your Company"
+                  autocomplete="organization"
+                >
+                <span class="hint">Optional - helps us understand your business context</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">
+                  Phone Number
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone"
+                  placeholder="+234-XXX-XXX-XXXX"
+                  pattern="[\+]?[0-9]{10,15}"
+                  title="Please enter a valid phone number"
+                  autocomplete="tel"
+                  inputmode="tel"
+                >
+                <span class="hint">Optional - for faster response</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="service">
+                  Service Interest
+                  <span class="required" aria-label="required">*</span>
+                </label>
+                <select 
+                  id="service" 
+                  name="service"
+                  required
+                  aria-required="true"
+                  aria-describedby="service-error"
+                >
+                  <option value="">-- Select a service --</option>
+                  <option value="custom-web-applications">Custom Web Applications</option>
+                  <option value="mobile-app-development">Mobile App Development</option>
+                  <option value="enterprise-software">Enterprise Software Solutions</option>
+                  <option value="cloud-migration">Cloud Migration</option>
+                  <option value="cloud-architecture">Cloud Architecture Design</option>
+                  <option value="managed-cloud">Managed Cloud Services</option>
+                  <option value="it-strategy">IT Strategy Consulting</option>
+                  <option value="devops">DevOps & Automation</option>
+                  <option value="training">Technical Training</option>
+                  <option value="other">Other / General Inquiry</option>
+                </select>
+                <span id="service-error" class="error-message" role="alert">Please select a service</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">
+                  Message
+                  <span class="required" aria-label="required">*</span>
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message"
+                  required
+                  aria-required="true"
+                  aria-describedby="message-error message-hint"
+                  placeholder="Tell us about your project requirements..."
+                  minlength="20"
+                  maxlength="1000"
+                ></textarea>
+                <span id="message-hint" class="hint">Please provide details about your project (minimum 20 characters)</span>
+                <span id="message-error" class="error-message" role="alert">Please enter a message (at least 20 characters)</span>
+              </div>
+              
+              <button 
+                type="submit" 
+                class="submit-button"
+                aria-busy="false"
+              >
+                <span class="button-text">Send Message</span>
+                <span class="button-spinner" aria-hidden="true"></span>
+              </button>
+              
+              <div id="form-message" class="form-message" role="status" aria-live="polite" aria-atomic="true"></div>
+            </form>
+          </div>
           
           <div class="contact-info">
             <div class="contact-item">
@@ -1249,5 +1561,7 @@
       </p>
     </div>
   </footer>
+  
+  <script src="js/contact-form.js"></script>
 </body>
 </html>
