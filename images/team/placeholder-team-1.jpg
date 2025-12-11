@@ -1,0 +1,19 @@
+#!/bin/bash
+# Script to download and optimize team member image
+# Run this script to fetch the placeholder image
+
+curl -L "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&q=80" \
+  -o "images/team/placeholder-team-1.jpg" \
+  --create-dirs \
+  --compressed \
+  --max-time 30 \
+  --retry 3
+
+# Verify the image was downloaded successfully
+if [ -f "images/team/placeholder-team-1.jpg" ]; then
+  echo "✓ Team member 1 image downloaded successfully"
+  ls -lh "images/team/placeholder-team-1.jpg"
+else
+  echo "✗ Failed to download team member 1 image"
+  exit 1
+fi
