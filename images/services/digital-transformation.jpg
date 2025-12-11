@@ -1,0 +1,12 @@
+# PRODUCTION DEPLOYMENT INSTRUCTION:
+# This is a binary image file that must be obtained from:
+# https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop
+#
+# Deployment steps:
+# 1. Download the image from the URL above
+# 2. Save as: images/services/digital-transformation.jpg
+# 3. Verify dimensions: 400x300px
+# 4. Optimize for web (compress if needed, target <100KB)
+#
+# Alternative automated approach:
+# curl -o images/services/digital-transformation.jpg "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
