@@ -1,0 +1,45 @@
+{
+  "name": "lagos-software-consulting-landing-page",
+  "version": "1.0.0",
+  "description": "High-performance landing page optimized for Nigerian internet speeds",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run clean && npm run optimize:images && vite build && npm run optimize:build",
+    "preview": "vite preview",
+    "clean": "rimraf dist",
+    "optimize:images": "node scripts/optimize-images.js",
+    "optimize:build": "node scripts/optimize-build.js",
+    "test:performance": "lighthouse http://localhost:8080 --output=json --output=html --output-path=./lighthouse-report --chrome-flags=\"--headless\" --only-categories=performance",
+    "analyze": "vite-bundle-visualizer",
+    "serve": "serve dist -l 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^5.0.10",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-html": "^3.2.1",
+    "vite-bundle-visualizer": "^1.0.1",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "sharp": "^0.33.1",
+    "cssnano": "^6.0.3",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16",
+    "terser": "^5.26.0",
+    "glob": "^10.3.10",
+    "rimraf": "^5.0.5",
+    "serve": "^14.2.1",
+    "lighthouse": "^11.4.0",
+    "critical": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
