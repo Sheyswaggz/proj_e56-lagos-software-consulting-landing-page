@@ -1,0 +1,2 @@
+# Use curl or wget to download the image
+curl -o images/team/placeholder-team-2.jpg "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face"

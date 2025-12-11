@@ -194,6 +194,282 @@
       color: var(--color-dark);
     }
     
+    .company-overview {
+      background-color: white;
+    }
+    
+    .mission-statement {
+      max-width: 800px;
+      margin: 0 auto var(--spacing-xl);
+      text-align: center;
+    }
+    
+    .mission-statement h3 {
+      font-size: 1.75rem;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .mission-statement p {
+      font-size: 1.125rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+    
+    .core-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .value-card {
+      background-color: var(--color-light);
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      text-align: center;
+      transition: var(--transition);
+    }
+    
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .value-card h4 {
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+      font-size: 1.25rem;
+    }
+    
+    .value-card p {
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+    }
+    
+    .lagos-expertise {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: white;
+      padding: var(--spacing-lg);
+      border-radius: var(--border-radius);
+      margin-bottom: var(--spacing-xl);
+      text-align: center;
+    }
+    
+    .lagos-expertise h3 {
+      font-size: 1.75rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .lagos-expertise p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .company-history {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .company-history h3 {
+      font-size: 1.75rem;
+      color: var(--color-dark);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: var(--spacing-md);
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--color-primary);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: var(--spacing-lg);
+      padding-left: var(--spacing-lg);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--color-primary);
+    }
+    
+    .timeline-year {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .timeline-content {
+      color: var(--color-text-light);
+    }
+    
+    .team-showcase {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .team-showcase h3 {
+      font-size: 1.75rem;
+      color: var(--color-dark);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+    }
+    
+    .team-member {
+      background-color: var(--color-light);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      transition: var(--transition);
+      text-align: center;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .team-member-photo {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    
+    .team-member-info {
+      padding: var(--spacing-md);
+    }
+    
+    .team-member-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--color-dark);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .team-member-role {
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .team-member-credentials {
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    .trust-indicators {
+      background-color: var(--color-light);
+      padding: var(--spacing-lg);
+      border-radius: var(--border-radius);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .trust-indicators h3 {
+      font-size: 1.75rem;
+      color: var(--color-dark);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .indicators-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-md);
+      text-align: center;
+    }
+    
+    .indicator {
+      padding: var(--spacing-md);
+    }
+    
+    .indicator-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .indicator-label {
+      color: var(--color-text-light);
+      font-size: 1rem;
+    }
+    
+    .testimonials {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .testimonials h3 {
+      font-size: 1.75rem;
+      color: var(--color-dark);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      border-left: 4px solid var(--color-primary);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .testimonial-text {
+      color: var(--color-text-light);
+      font-style: italic;
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.8;
+    }
+    
+    .testimonial-author {
+      font-weight: bold;
+      color: var(--color-dark);
+    }
+    
+    .testimonial-company {
+      color: var(--color-primary);
+      font-size: 0.9rem;
+    }
+    
     .about-content {
       max-width: 800px;
       margin: 0 auto;
@@ -324,6 +600,14 @@
       .services-grid {
         grid-template-columns: 1fr;
       }
+      
+      .timeline {
+        padding-left: var(--spacing-sm);
+      }
+      
+      .timeline-item {
+        padding-left: var(--spacing-md);
+      }
     }
     
     @media (max-width: 320px) {
@@ -347,6 +631,10 @@
       }
       
       .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .team-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
@@ -409,6 +697,164 @@
         <h1 id="hero-title">Transform Your Business with Expert Software Solutions</h1>
         <p>We are Lagos's premier software consulting firm, delivering innovative technology solutions that drive business growth across Africa.</p>
         <a href="#contact" class="cta-button" aria-label="Get started with our services">Get Started</a>
+      </div>
+    </section>
+    
+    <section id="company-overview" class="company-overview" aria-labelledby="overview-title">
+      <div class="container">
+        <h2 id="overview-title">About Lagos Software Consulting</h2>
+        
+        <div class="mission-statement">
+          <h3>Our Mission</h3>
+          <p>To empower Nigerian businesses with world-class technology solutions that drive digital transformation and sustainable growth. We are committed to delivering excellence, fostering innovation, and building lasting partnerships with our clients across Lagos and beyond.</p>
+        </div>
+        
+        <div class="core-values">
+          <article class="value-card">
+            <h4>Excellence</h4>
+            <p>We deliver exceptional quality in every project, exceeding client expectations through technical expertise and attention to detail.</p>
+          </article>
+          
+          <article class="value-card">
+            <h4>Innovation</h4>
+            <p>We embrace cutting-edge technologies and creative solutions to solve complex business challenges.</p>
+          </article>
+          
+          <article class="value-card">
+            <h4>Integrity</h4>
+            <p>We build trust through transparency, honesty, and ethical business practices in all our engagements.</p>
+          </article>
+          
+          <article class="value-card">
+            <h4>Partnership</h4>
+            <p>We collaborate closely with clients, understanding their unique needs and becoming true technology partners.</p>
+          </article>
+        </div>
+        
+        <div class="lagos-expertise">
+          <h3>Deep Lagos Market Understanding</h3>
+          <p>As a proudly Lagos-based firm, we understand the unique challenges and opportunities of the Nigerian business landscape. Our team combines international best practices with local market insights to deliver solutions that work in the African context. We navigate local infrastructure challenges, understand regulatory requirements, and design systems optimized for Nigerian internet connectivity and mobile-first users.</p>
+        </div>
+        
+        <div class="company-history">
+          <h3>Our Journey</h3>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-year">2015</div>
+              <div class="timeline-content">
+                <strong>Foundation in Lagos</strong> - Established with a vision to bridge the technology gap for Nigerian businesses, starting with a team of 5 passionate engineers.
+              </div>
+            </article>
+            
+            <article class="timeline-item">
+              <div class="timeline-year">2017</div>
+              <div class="timeline-content">
+                <strong>Regional Expansion</strong> - Expanded services across West Africa, delivering projects for clients in Ghana, Senegal, and Kenya while maintaining our Lagos headquarters.
+              </div>
+            </article>
+            
+            <article class="timeline-item">
+              <div class="timeline-year">2019</div>
+              <div class="timeline-content">
+                <strong>Cloud Excellence Recognition</strong> - Achieved AWS Advanced Consulting Partner status and Microsoft Gold Partner certification, becoming one of Nigeria's leading cloud solution providers.
+              </div>
+            </article>
+            
+            <article class="timeline-item">
+              <div class="timeline-year">2021</div>
+              <div class="timeline-content">
+                <strong>Digital Transformation Leader</strong> - Successfully completed 100+ digital transformation projects, helping Nigerian enterprises modernize their technology infrastructure.
+              </div>
+            </article>
+            
+            <article class="timeline-item">
+              <div class="timeline-year">2024</div>
+              <div class="timeline-content">
+                <strong>Innovation Hub Launch</strong> - Opened our state-of-the-art innovation center in Victoria Island, fostering collaboration and training the next generation of Nigerian tech talent.
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <div class="team-showcase">
+          <h3>Meet Our Leadership Team</h3>
+          <div class="team-grid">
+            <article class="team-member">
+              <div class="team-member-photo" aria-label="Team member photo">AO</div>
+              <div class="team-member-info">
+                <h4 class="team-member-name">Adebayo Okonkwo</h4>
+                <p class="team-member-role">Chief Executive Officer</p>
+                <p class="team-member-credentials">15+ years in software engineering. Former Tech Lead at Microsoft. MSc Computer Science, University of Lagos. Passionate about building technology solutions for African markets.</p>
+              </div>
+            </article>
+            
+            <article class="team-member">
+              <div class="team-member-photo" aria-label="Team member photo">CN</div>
+              <div class="team-member-info">
+                <h4 class="team-member-name">Chioma Nwosu</h4>
+                <p class="team-member-role">Chief Technology Officer</p>
+                <p class="team-member-credentials">12+ years in cloud architecture. AWS Certified Solutions Architect Professional. Led digital transformation initiatives for major Nigerian banks and fintech companies.</p>
+              </div>
+            </article>
+            
+            <article class="team-member">
+              <div class="team-member-photo" aria-label="Team member photo">OA</div>
+              <div class="team-member-info">
+                <h4 class="team-member-name">Oluwaseun Adeyemi</h4>
+                <p class="team-member-role">Head of Consulting</p>
+                <p class="team-member-credentials">10+ years in IT consulting. MBA from Lagos Business School. Specializes in aligning technology strategy with business objectives for Nigerian enterprises.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <div class="trust-indicators">
+          <h3>Why Businesses Trust Us</h3>
+          <div class="indicators-grid">
+            <div class="indicator">
+              <div class="indicator-value">9+</div>
+              <div class="indicator-label">Years in Business</div>
+            </div>
+            
+            <div class="indicator">
+              <div class="indicator-value">150+</div>
+              <div class="indicator-label">Projects Delivered</div>
+            </div>
+            
+            <div class="indicator">
+              <div class="indicator-value">50+</div>
+              <div class="indicator-label">Enterprise Clients</div>
+            </div>
+            
+            <div class="indicator">
+              <div class="indicator-value">98%</div>
+              <div class="indicator-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonials">
+          <h3>What Our Clients Say</h3>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <p class="testimonial-text">"Lagos Software Consulting transformed our operations with a custom ERP system that perfectly fits our Nigerian business processes. Their understanding of local challenges made all the difference."</p>
+              <p class="testimonial-author">Funke Akindele</p>
+              <p class="testimonial-company">CEO, Retail Solutions Nigeria</p>
+            </article>
+            
+            <article class="testimonial-card">
+              <p class="testimonial-text">"The team's expertise in cloud migration helped us reduce infrastructure costs by 40% while improving system reliability. They're true partners in our digital transformation journey."</p>
+              <p class="testimonial-author">Ibrahim Mohammed</p>
+              <p class="testimonial-company">CTO, Lagos Financial Services</p>
+            </article>
+            
+            <article class="testimonial-card">
+              <p class="testimonial-text">"Professional, responsive, and deeply knowledgeable. They delivered our mobile banking app on time and within budget, handling all the complexities of the Nigerian market seamlessly."</p>
+              <p class="testimonial-author">Ngozi Okafor</p>
+              <p class="testimonial-company">Head of Digital, West African Bank</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
     
