@@ -482,6 +482,40 @@
       background-color: white;
     }
     
+    .services-intro {
+      max-width: 800px;
+      margin: 0 auto var(--spacing-lg);
+      text-align: center;
+      color: var(--color-text-light);
+      font-size: 1.125rem;
+    }
+    
+    .service-categories {
+      margin-top: var(--spacing-lg);
+    }
+    
+    .service-category {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .service-category-header {
+      text-align: center;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .service-category-header h3 {
+      font-size: 1.75rem;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .service-category-description {
+      color: var(--color-text-light);
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -505,14 +539,80 @@
       border-color: var(--color-primary);
     }
     
-    .service-card h3 {
+    .service-card h4 {
       color: var(--color-primary);
       margin-bottom: var(--spacing-sm);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
     
     .service-card p {
       color: var(--color-text-light);
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.6;
+    }
+    
+    .service-benefits {
+      margin-top: var(--spacing-sm);
+      text-align: left;
+    }
+    
+    .service-benefits h5 {
+      font-size: 0.95rem;
+      color: var(--color-dark);
+      margin-bottom: var(--spacing-xs);
+      font-weight: 600;
+    }
+    
+    .service-benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .service-benefits li {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.25rem;
+    }
+    
+    .service-benefits li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-secondary);
+      font-weight: bold;
+    }
+    
+    .service-technologies {
+      margin-top: var(--spacing-sm);
+      padding-top: var(--spacing-sm);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-technologies h5 {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    
+    .tech-tag {
+      background-color: white;
+      color: var(--color-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid var(--color-primary);
     }
     
     .contact {
@@ -595,6 +695,10 @@
       
       section h2 {
         font-size: 1.75rem;
+      }
+      
+      .service-category-header h3 {
+        font-size: 1.5rem;
       }
       
       .services-grid {
@@ -871,36 +975,242 @@
     <section id="services" class="services" aria-labelledby="services-title">
       <div class="container">
         <h2 id="services-title">Our Services</h2>
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Custom Software Development</h3>
-            <p>Tailored software solutions designed to meet your unique business requirements. From web applications to mobile apps, we build scalable, secure, and high-performance systems.</p>
-          </article>
+        <p class="services-intro">We deliver comprehensive technology solutions tailored to Nigerian businesses, combining international best practices with deep local market understanding.</p>
+        
+        <div class="service-categories">
+          <section class="service-category" aria-labelledby="software-dev-title">
+            <header class="service-category-header">
+              <h3 id="software-dev-title">Software Development</h3>
+              <p class="service-category-description">Custom software solutions designed and built for the Nigerian market, optimized for local infrastructure and user needs.</p>
+            </header>
+            
+            <div class="services-grid">
+              <article class="service-card">
+                <h4>Custom Web Applications</h4>
+                <p>Scalable, secure web applications built with modern frameworks and optimized for Nigerian internet connectivity.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>Mobile-first responsive design</li>
+                    <li>Offline-capable functionality</li>
+                    <li>Low-bandwidth optimization</li>
+                    <li>Local payment integration</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Technologies:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="service-card">
+                <h4>Mobile App Development</h4>
+                <p>Native and cross-platform mobile applications for iOS and Android, designed for African mobile users.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>Native performance</li>
+                    <li>Offline-first architecture</li>
+                    <li>USSD integration</li>
+                    <li>SMS fallback support</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Technologies:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Swift</span>
+                    <span class="tech-tag">Kotlin</span>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="service-card">
+                <h4>Enterprise Software Solutions</h4>
+                <p>Comprehensive ERP, CRM, and business management systems tailored to Nigerian business processes.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>Process automation</li>
+                    <li>Real-time reporting</li>
+                    <li>Multi-currency support</li>
+                    <li>Regulatory compliance</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Technologies:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">SAP</span>
+                    <span class="tech-tag">Odoo</span>
+                    <span class="tech-tag">Salesforce</span>
+                    <span class="tech-tag">Custom</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
           
-          <article class="service-card">
-            <h3>Cloud Solutions</h3>
-            <p>Migrate to the cloud with confidence. We provide cloud architecture design, migration services, and ongoing management for AWS, Azure, and Google Cloud platforms.</p>
-          </article>
+          <section class="service-category" aria-labelledby="cloud-solutions-title">
+            <header class="service-category-header">
+              <h3 id="cloud-solutions-title">Cloud Solutions</h3>
+              <p class="service-category-description">Enterprise-grade cloud infrastructure and migration services, helping Nigerian businesses leverage the power of cloud computing.</p>
+            </header>
+            
+            <div class="services-grid">
+              <article class="service-card">
+                <h4>Cloud Migration</h4>
+                <p>Seamless migration of your applications and data to AWS, Azure, or Google Cloud with minimal downtime.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>Zero-downtime migration</li>
+                    <li>Cost optimization</li>
+                    <li>Performance improvement</li>
+                    <li>Disaster recovery setup</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Technologies:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Azure</span>
+                    <span class="tech-tag">GCP</span>
+                    <span class="tech-tag">Terraform</span>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="service-card">
+                <h4>Cloud Architecture Design</h4>
+                <p>Scalable, secure, and cost-effective cloud architecture designed for your specific business needs.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>High availability design</li>
+                    <li>Auto-scaling capabilities</li>
+                    <li>Security best practices</li>
+                    <li>Cost optimization</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Technologies:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Serverless</span>
+                    <span class="tech-tag">Microservices</span>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="service-card">
+                <h4>Managed Cloud Services</h4>
+                <p>24/7 monitoring, maintenance, and optimization of your cloud infrastructure by certified experts.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>24/7 monitoring</li>
+                    <li>Proactive maintenance</li>
+                    <li>Security updates</li>
+                    <li>Performance tuning</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Technologies:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">CloudWatch</span>
+                    <span class="tech-tag">Datadog</span>
+                    <span class="tech-tag">New Relic</span>
+                    <span class="tech-tag">PagerDuty</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
           
-          <article class="service-card">
-            <h3>Digital Transformation</h3>
-            <p>Modernize your business processes with cutting-edge technology. We help organizations embrace digital innovation to improve efficiency and competitiveness.</p>
-          </article>
-          
-          <article class="service-card">
-            <h3>IT Consulting</h3>
-            <p>Strategic technology guidance to align IT initiatives with business goals. Our consultants provide expert advice on technology strategy, architecture, and implementation.</p>
-          </article>
-          
-          <article class="service-card">
-            <h3>DevOps & Automation</h3>
-            <p>Streamline your development and operations with modern DevOps practices. We implement CI/CD pipelines, infrastructure as code, and automated testing frameworks.</p>
-          </article>
-          
-          <article class="service-card">
-            <h3>Technical Training</h3>
-            <p>Empower your team with the latest technical skills. We offer customized training programs in software development, cloud technologies, and agile methodologies.</p>
-          </article>
+          <section class="service-category" aria-labelledby="digital-transformation-title">
+            <header class="service-category-header">
+              <h3 id="digital-transformation-title">Digital Transformation</h3>
+              <p class="service-category-description">Strategic technology initiatives that modernize your business operations and drive competitive advantage in the Nigerian market.</p>
+            </header>
+            
+            <div class="services-grid">
+              <article class="service-card">
+                <h4>IT Strategy Consulting</h4>
+                <p>Strategic technology roadmaps aligned with your business objectives and Nigerian market realities.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>Technology roadmap</li>
+                    <li>Digital maturity assessment</li>
+                    <li>ROI analysis</li>
+                    <li>Change management</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Focus Areas:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Strategy</span>
+                    <span class="tech-tag">Planning</span>
+                    <span class="tech-tag">Assessment</span>
+                    <span class="tech-tag">Roadmap</span>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="service-card">
+                <h4>DevOps & Automation</h4>
+                <p>Modern DevOps practices and automation to accelerate development and improve reliability.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>Faster deployments</li>
+                    <li>Reduced errors</li>
+                    <li>Improved collaboration</li>
+                    <li>Continuous delivery</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Technologies:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Jenkins</span>
+                    <span class="tech-tag">GitLab CI</span>
+                    <span class="tech-tag">Ansible</span>
+                    <span class="tech-tag">GitHub Actions</span>
+                  </div>
+                </div>
+              </article>
+              
+              <article class="service-card">
+                <h4>Technical Training</h4>
+                <p>Customized training programs to upskill your team in modern technologies and best practices.</p>
+                <div class="service-benefits">
+                  <h5>Key Benefits:</h5>
+                  <ul role="list">
+                    <li>Hands-on workshops</li>
+                    <li>Certification preparation</li>
+                    <li>Custom curriculum</li>
+                    <li>Ongoing mentorship</li>
+                  </ul>
+                </div>
+                <div class="service-technologies">
+                  <h5>Training Areas:</h5>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Cloud</span>
+                    <span class="tech-tag">DevOps</span>
+                    <span class="tech-tag">Agile</span>
+                    <span class="tech-tag">Security</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       </div>
     </section>
